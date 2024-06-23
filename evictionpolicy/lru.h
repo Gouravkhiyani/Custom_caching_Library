@@ -33,6 +33,14 @@ public:
         }
     }
 
+    void removeKey(Key k)
+    {
+        if(check.find(k)!=check.end())
+        {
+            keys->deleteNode(check[k]);
+        }
+    }
+
     std::pair<Key, bool> evict()
     {
         Node<Key> *nodeToEvict = keys->getFirstNode();

@@ -25,11 +25,19 @@ public:
         }
     }
 
+    void removeKey(Key k)
+    {
+        check.erase(k);
+    }
+
     std::pair<Key, bool> evict()
     {
         Key temp;
         if (keys.empty())                // if keys is empty we return a garbage value
             return {temp, false};
+
+        while(check.find(keys.front())==check.end())
+            keys.pop();
 
         Key keyToEvict = keys.front();
         keys.pop();
