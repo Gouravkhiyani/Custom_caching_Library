@@ -1,6 +1,7 @@
 #ifndef lifo
 #define lifo
 
+//Last In First Out based eviction, making use of a stack
 template <class Key>
 class LIFO : public EvictionPolicy<Key>
 {
@@ -27,6 +28,8 @@ public:
     std::pair<Key, bool> evict()
     {
         Key temp;
+        
+        //temp stores a garbage value
         if (keys.empty())
             return {temp, false};
 

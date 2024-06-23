@@ -2,6 +2,8 @@
 #define doubly_linked_list
 
 template <class Key>
+
+//Node structure for a doubly linked list
 class Node
 {
 public:

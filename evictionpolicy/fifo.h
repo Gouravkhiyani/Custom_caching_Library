@@ -1,7 +1,7 @@
 #ifndef fifo
 #define fifo
 
-
+//First In First Out based eviction, making use of a queue
 template <class Key>
 class FIFO : public EvictionPolicy<Key>
 {

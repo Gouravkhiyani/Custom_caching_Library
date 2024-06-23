@@ -4,6 +4,7 @@
 #include "..\utility\doubly_linked_list.h"
 #include <unordered_map>
 
+//Least Recently Used based eviction, making use of a doubly linked list
 template <class Key>
 class LRU : public EvictionPolicy<Key>
 {

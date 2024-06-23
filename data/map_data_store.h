@@ -4,6 +4,7 @@
 #include <iostream>
 #include <unordered_map>
 
+//This is an unordered map based data store that stores key value pairs
 template <class Key, class Value>
 class MapDataStore : public DataStore<Key, Value>
 {
@@ -12,6 +13,7 @@ private:
     std::unordered_map<Key, Value> data;
 
 public:
+    //Functions of data_store_interface are implemented here
     MapDataStore(int capacity)
     {
         this->capacity = capacity;
@@ -20,6 +22,7 @@ public:
 
     void addToDataStore(Key k, Value v)
     {
+        //a key value pair is added 
         data[k] = v;
     }
 
@@ -38,7 +41,7 @@ public:
     {
         Value v;
         if (data.find(k) == data.end())
-            return {v, false}; // v here represents some garbage value
+            return {v, false};  //v here represents some garbage value
 
         else
         {
@@ -49,11 +52,7 @@ public:
 
     bool isDataStoreFull()
     {
-        if (data.size() >= capacity)
-            return true;
-
-        else
-            return false;
+        return (data.size()>=capacity);
     }
 
     void printFromDataStore()

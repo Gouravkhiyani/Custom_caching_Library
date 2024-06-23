@@ -1,0 +1,19 @@
+DataStore interface functions:
+1. addToDataStore(Key k, Value v)   -> adds a key value pair
+2. deleteFromDataStore(Key k)       -> deletes a key from datastore
+3. getFromDataStore(Key k)          -> returns a pair of value, bool if value is present or not
+4. isDataStoreFull();               -> tells if the data store has reached its capacity
+5. printFromDataStore();            -> prints all value present in data store
+
+DoublyLinkedList functions:
+1. deleteNode(Node<Key>* node)      ->deletes a node from DoublyLinkedList
+2. addNodeAtLast(Node<Key> *node)   ->adds a node at the last of DoublyLinkedList
+3. addElementAtLast(Key data)       ->if a new key is found, creates a new node and adds at the last of DoublyLinkedList
+4. bool isEmpty()                   ->checks if the DoublyLinkedList is empty
+5. getFirstNode()                   ->returns the pointer to first node of DoublyLinkedList
+6. getLastNode()                    ->returns the pointer to last node of DoublyLinkedList
+7. printList()                      ->prints all elements of DoublyLinkedList
+
+Eviction Policy interface functions:
+1. accessKey(Key k)                 ->if a key is accessed then updates it in the eviction policy
+2. evict()                          ->evicts an element from the data based on the eviction policy
