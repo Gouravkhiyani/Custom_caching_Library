@@ -27,8 +27,8 @@ private:
 public:
     DoublyLinkedList()
     {
-        head = new Node<Key>(INT_MIN);
-        tail = new Node<Key>(INT_MIN);
+        head = new Node<Key>(Key{});
+        tail = new Node<Key>(Key{});
         head->next = tail;
         tail->prev = head;
     }

@@ -38,7 +38,7 @@ Cache<Key, Value>::Cache(EvictionPolicy<Key> &evictPolicy, DataStore<Key, Value>
 template<class Key, class Value>
 void Cache<Key, Value>::put(Key k, Value v)
 {
-    std::pair<Key, bool> keyValueUpdate = this->dataStore.getFromDataStore(k);
+    std::pair<Value, bool> keyValueUpdate = this->dataStore.getFromDataStore(k);
 
     //if the key is already present in datastore, then update it
     if(keyValueUpdate.second)
