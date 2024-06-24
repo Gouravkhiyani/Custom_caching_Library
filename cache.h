@@ -118,6 +118,7 @@ bool Cache<Key, Value>::remove(Key k)
     this->dataStore.deleteFromDataStore(k);
     this->evictPolicy.removeKey(k);
 
+    return true;
 }
 
 #endif

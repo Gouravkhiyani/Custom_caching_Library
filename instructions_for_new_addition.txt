@@ -1,3 +1,8 @@
+Cache:
+1. put(Key k, Value v)              ->adds a new key value pair to the cache
+2. get(Key k)                       ->gets value of a key from the cache
+3. remove(Key k)                    ->removes the given key from the cache if present
+
 DataStore interface functions:
 1. addToDataStore(Key k, Value v)   -> adds a key value pair
 2. deleteFromDataStore(Key k)       -> deletes a key from datastore
@@ -17,3 +22,4 @@ DoublyLinkedList functions:
 Eviction Policy interface functions:
 1. accessKey(Key k)                 ->if a key is accessed then updates it in the eviction policy
 2. evict()                          ->evicts an element from the data based on the eviction policy
+3. removeKey(Key k)                 ->removes the key from the cache
